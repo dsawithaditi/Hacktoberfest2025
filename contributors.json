@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Muteeb Aslam",
+    "occupation": "Full Stack Developer",
+    "place": "Lahore, Pakistan",
+    "bio": "10 Months of development experience and certified from freeCodeCamp,Udemy and HackerRank. I build React app with modern frontend using component libraries like tailwind and ReactBits. I also deal with backend operations such as connecting SQL.",
+    "github_profile_url": "https://github.com/Muteeb489",
+    "project_netlify_link": "https://muteeb-profile-card.netlify.app/",
+    "tags": ["animated", "light-theme"]
   }
 ]
