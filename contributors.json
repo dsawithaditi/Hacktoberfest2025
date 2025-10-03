@@ -1,5 +1,14 @@
 [
   {
+    "name": "Abhishek Rao",
+    "occupation": "Software Engineer",
+    "place": "Gorakhpur, India",
+    "bio": "Building beautiful things for the web!",
+    "github_profile_url": "https://github.com/abhishekraoas",
+    "project_netlify_link": "https://abhishekrao-profile-card.netlify.app/",
+    "tags": ["minimalist", "animation", "light-theme"]
+  },
+  {
     "name": "Aditi Sharma",
     "occupation": "Software Engineer",
     "place": "Kolkata, India",
