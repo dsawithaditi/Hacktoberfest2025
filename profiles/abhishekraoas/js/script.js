@@ -1,23 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const card = document.querySelector(".profile-card");
+const card = document.querySelector(".card");
+const maxRotation = 10;
 
-    if (card) {
-        card.addEventListener("mousemove", (e) => {
-            const cardRect = card.getBoundingClientRect();
-            const x = e.clientX - cardRect.left;
-            const y = e.clientY - cardRect.top;
+card.addEventListener("mousemove", (e) => {
+  const cardRect = card.getBoundingClientRect();
 
-            const centerX = card.offsetWidth / 2;
-            const centerY = card.offsetHeight / 2;
+  const x = e.clientX - cardRect.left - cardRect.width / 2;
+  const y = e.clientY - cardRect.top - cardRect.height / 2;
 
-            const rotateX = ((y - centerY) / centerY) * -10;
-            const rotateY = ((x - centerX) / centerX) * 10;
+  const rotateY = (x / (cardRect.width / 2)) * maxRotation;
+  const rotateX = -1 * (y / (cardRect.height / 2)) * maxRotation;
 
-            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+  card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
 
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "rotateX(0deg) rotateY(0deg)";
-        });
-    }
+card.addEventListener("mouseleave", () => {
+  card.style.transform = "rotateX(0deg) rotateY(0deg)";
 });
