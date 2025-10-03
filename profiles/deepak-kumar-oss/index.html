@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Kumar - Developer Pokédex</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="pokedex-container">
+        <div id="pokedex-body" class="pokedex">
+            <div class="pokedex-header">
+                <div class="header-left">
+                    <div id="theme-toggle-btn" class="light light-blue"></div>
+                    <div class="light light-red"></div>
+                    <div class="light light-yellow"></div>
+                    <div class="light light-green"></div>
+                </div>
+                <div class="header-right">
+                    <div class="mini-screen">
+                        <div class="kaomoji-screen"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pokedex-screen-container">
+                <div id="screen-off-overlay" class="screen-off active"></div>
+                <div class="pokedex-screen scanlines">
+                    <div class="screen-header">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    
+                    <div class="screen-content">
+                        <div id="profile-view" class="view active">
+                            <div class="profile-image-container">
+                                <img src="./assets/images/img.jpeg" alt="Deepak Kumar" class="profile-image">
+                            </div>
+                            <h1 class="profile-name">Deepak Kumar</h1>
+                            
+                            <div class="profile-types">
+                                <span class="type-tag type-react">REACT</span>
+                                <span class="type-tag type-node">NODE.JS</span>
+                                <span class="type-tag type-solana">SOLANA</span>
+                                <span class="type-tag type-postgres">POSTGRES</span>
+                                <span class="type-tag type-react">ETHERS.JS</span>
+                                <span class="type-tag type-postgres">RUST</span>
+                                <span class="type-tag type-solana">JAVASCRIPT</span>
+                                <span class="type-tag type-node">CPP</span>
+                            </div>
+
+                            <div id="info-prompt" class="info-prompt">▼ Press Down for Info ▼</div>
+
+                            <div id="info-screen" class="info-overlay">
+                                <p id="info-text"></p>
+                                <div id="page-indicator" class="page-indicator"></div>
+                            </div>
+                        </div>
+
+                        <div id="stats-view" class="view">
+                            <h3>Base Stats</h3>
+                            <canvas id="stats-chart" width="200" height="200"></canvas>
+                        </div>
+
+                        <div id="lang-stats-view" class="view">
+                            <h3>Language Proficiency</h3>
+                            <div class="lang-stats-container">
+                                <div class="lang-stat">
+                                    <span class="lang-label">JavaScript</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 90%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">Ethers.js</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 80%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">Solana (Rust)</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 75%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">Go</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 60%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">Java</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 65%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">C++</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 70%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">MongoDB</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 85%;"></div></div>
+                                </div>
+                                <div class="lang-stat">
+                                    <span class="lang-label">Pinata SDK</span>
+                                    <div class="lang-bar-container"><div class="lang-bar" style="width: 78%;"></div></div>
+                                </div>
+                            </div>
+                            <div class="scroll-indicator">
+                                <span class="arrow-up">▲</span>
+                                <span class="arrow-down">▼</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pokedex-controls">
+                <div class="d-pad-container">
+                    <button id="d-pad-up" class="d-pad-btn d-pad-up"></button>
+                    <button id="d-pad-down" class="d-pad-btn d-pad-down"></button>
+                    <button id="d-pad-left" class="d-pad-btn d-pad-left"></button>
+                    <button id="d-pad-right" class="d-pad-btn d-pad-right"></button>
+                    <button id="d-pad-center" class="d-pad-btn d-pad-center"></button>
+                </div>
+                <div class="action-buttons">
+                    <div class="button-group">
+                        <button id="view-toggle-btn" class="button-b">B</button>
+                        <span class="button-label">MODE</span>
+                    </div>
+                    <div class="button-group">
+                        <button id="confirm-btn" class="button-a">A</button>
+                        <span class="button-label">CONFIRM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pokedex-footer">
+                <div class="social-links">
+                    <a href="https://github.com/deepak-kumar-oss" class="social-link icon highlight" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/deepak-kumar-0x00/" class="social-link icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link icon" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pokedex-hinge"></div>
+    </div>
+    
+    <audio id="sound-confirm" src="assets/sounds/confirm.wav" preload="auto"></audio>
+    <audio id="sound-select" src="assets/sounds/select.wav" preload="auto"></audio>
+    <audio id="sound-theme" src="assets/sounds/theme.wav" preload="auto"></audio>
+    <audio id="sound-poweron" src="assets/sounds/poweron.wav" preload="auto"></audio>
+    <audio id="sound-back" src="assets/sounds/back.wav" preload="auto"></audio>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

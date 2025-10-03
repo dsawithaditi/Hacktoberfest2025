@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+  "name": "Deepak Kumar",
+  "occupation": "Full-Stack Developer",
+  "place": "Pune/Dehradun, India",
+  "bio": "A web developer who loves building polished, user-friendly applications. I enjoy the process of turning a creative idea into a seamless digital experience.",
+  "github_profile_url": "https://github.com/deepak-kumar-oss",
+  "project_netlify_link": "https://deepak-pokidex.netlify.app/",
+  "tags": ["animation", "poki-dex" , "8-bit"]
   }
 ]
