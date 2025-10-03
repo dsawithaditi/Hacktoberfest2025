@@ -62,4 +62,14 @@
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
   }
+  {
+  "name": "Harshita Gupta",
+  "occupation": "Aspiring Software Developer",
+  "place": "India",
+  "bio": "Love building UI and learning Java & JS 🚀",
+  "github_profile_url": "https://github.com/hershiee",
+  "project_netlify_link": "https://hershiee-profile-card.netlify.app",
+  "tags": ["minimalist", "gradient", "light-theme", "responsive"]
+}
+
 ]
