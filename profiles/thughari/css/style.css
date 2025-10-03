@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a2e; 
+    color: #e0e0e0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-card {
+    background-color: #272740;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.profile-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6c63ff; 
+    box-shadow: 0 0 0 7px rgba(108, 99, 255, 0.2);
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.profile-title {
+    margin: 0;
+    font-size: 0.95em;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.profile-body {
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-bio {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #c0c0c0;
+    margin-bottom: 15px;
+}
+
+.profile-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center; 
+}
+
+.skill-tag {
+    background-color: #4a4497;
+    color: #ffffff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.skill-tag:hover {
+    background-color: #6c63ff;
+}
+
+.profile-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.social-icon {
+    color: #6c63ff;
+    font-size: 1.7em;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #928bff;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 400px) {
+    .profile-card {
+        padding: 20px;
+    }
+    .profile-name {
+        font-size: 1.6em;
+    }
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-skills {
+        justify-content: flex-start;
+    }
+}

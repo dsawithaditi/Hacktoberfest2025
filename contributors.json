@@ -61,5 +61,15 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Hari Thatikonda",
+    "occupation": "Software Developer",
+    "place": "Hyderabad, India",
+    "bio": "I am a Software Developer passionate about building scalable applications, solving challenging problems, and continuously improving through learning and innovation.",
+    "github_profile_url": "https://github.com/thughari",
+    "project_netlify_link": "https://hari-profile-card.netlify.app/",
+    "tags": ["minimalist", "responsive", "animated-hover", "interactive"]
   }
+
 ]
