@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Hari Babu Thatikonda",
+    "occupation": "Software Engineer - Java, Spring Boot, Angular",
+    "place": "Hyderabad, India",
+    "bio": "Experienced Software Engineer passionate about developing robust full-stack applications and optimizing system performance, leveraging Java, Spring Boot, and Angular.",
+    "github_profile_url": "https://github.com/thughari",
+    "project_netlify_link": "https://hari-profile-card.netlify.app/",
+    "tags": ["minimalist", "responsive", "animated-hover", "interactive"]
   }
 ]
