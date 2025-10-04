@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
-  }
+  },
+  {
+  "name": "Sachin Vaishnav",
+  "occupation": "Full-Stack Developer",
+  "place": "Noida, India",
+  "bio": "Building intuitive user experiences with clean code and performance in mind.",
+  "github_profile_url": "[https://github.com/SachinVaishnav2980]",
+  "project_netlify_link": "[https://sachinvaishnav-profile.netlify.app/]",
+  "tags": ["minimalist", "animation", "light-theme", "interactive"]
+}
 ]

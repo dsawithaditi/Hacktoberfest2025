@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+  background-size: 300% 300%;
+  animation: bgMove 8s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.card {
+  width: 420px;               /* Slightly bigger card */
+  max-width: 95vw;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  padding: 2.8rem 2rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 90deg, #a78bfa, #ec4899, #f87171, #a78bfa);
+  animation: rotate 8s linear infinite;
+  z-index: 0;
+  opacity: 0.25;
+  pointer-events: none; /* ✅ ensures hover & click elements above work */
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.profile-pic {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-pic img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.7);
+  object-fit: cover;
+  box-shadow: 0 0 35px rgba(255,255,255,0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(255,255,255,0.8);
+}
+
+.name {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 1rem;
+  color: #e0defc;
+  margin-bottom: 0.7rem;
+}
+
+.about {
+  font-size: 0.9rem;
+  color: #f3e8ff;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* === SOCIAL ICONS === */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3; /* ✅ keeps icons above the background layer */
+}
+
+.socials a {
+  font-size: 1.6rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  animation: pulse 3s infinite;
+}
+
+.socials a:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+.socials a:nth-child(1):hover { color: #0a66c2; background: rgba(10,102,194,0.2);} 
+.socials a:nth-child(2):hover { color: #171515; background: rgba(23,21,21,0.2);}  
+.socials a:nth-child(3):hover { color: #1da1f2; background: rgba(29,161,242,0.2);} 
+.socials a:nth-child(4):hover { color: #e1306c; background: rgba(225,48,108,0.2);} 
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.3); }
+  70% { box-shadow: 0 0 15px 10px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+.btn {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #fb923c, #f59e0b);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 480px) {
+  .card {
+    width: 90vw;
+    padding: 1.8rem 1rem;
+  }
+
+  .profile-pic img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .about {
+    font-size: 0.85rem;
+  }
+
+  .socials a {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+}
