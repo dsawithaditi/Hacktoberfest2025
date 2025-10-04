@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+
+    .profile-card {
+  background: rgba( r1, g1, b1, 0.2 );  /* light translucent overlay in your first color */
+  border: 1px solid rgba( r2, g2, b2, 0.3 );  /* subtle border in your second color */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari / WebKit */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+.skills {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills p {
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.skills p:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 640px) {
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+  </style>
+</head>
+<body class="h-screen w-full bg-[url('./assets/images/haikei.png')] bg-cover bg-center flex items-center justify-center">
+  <section class="profile-card mx-auto max-w-4xl w-full flex flex-col sm:flex-row items-center gap-4 sm:gap-6 p-4 sm:p-6 md:p-8">
+    <img src="./assets/images/images.jpeg" alt="pfp" class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-l object-cover shadow-lg ring-2 ring-white/20 flex-shrink-0">
+    <div class="flex flex-col gap-3 text-center sm:text-left">
+        <div class="flex flex-col sm:flex-row items-center sm:justify-start gap-3">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-200">Haaziq Ali</h1>
+          <div class="flex items-center gap-2">
+            <a href="https://github.com/HAAZIQ-ALI" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="p-2 rounded-md bg-white/10 text-slate-200 hover:bg-white/20 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.02c0 4.428 2.867 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.34-3.369-1.34-.455-1.158-1.11-1.467-1.11-1.467-.908-.62.069-.607.069-.607 1.004.07 1.532 1.033 1.532 1.033.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.986 1.03-2.685-.103-.254-.447-1.275.098-2.657 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.382.202 2.403.1 2.657.64.699 1.028 1.592 1.028 2.685 0 3.849-2.338 4.696-4.567 4.944.359.31.678.923.678 1.861 0 1.343-.012 2.426-.012 2.756 0 .268.18.58.688.482A10.02 10.02 0 0022 12.02C22 6.484 17.523 2 12 2z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="https://karou.me" target="_blank" rel="noopener noreferrer" aria-label="Portfolio website" class="p-2 rounded-md bg-white/10 text-slate-200 hover:bg-white/20 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3z" />
+                <path d="M5 5h5V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-5h-2v5H5V5z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <h2 class="text-lg sm:text-xl font-semibold text-slate-300">15 YO Aspiring Computer Scientist</h2>
+
+        <div class="skills">
+            <p>JavaScript</p><p>Python</p><p>Rust</p><p>TailWind Css <br></p>
+            <p>C++</p>
+        </div>
+        <p class="text-sm sm:text-base text-slate-400">Currently learning Assembly</p>
+        <p class="text-sm sm:text-base text-white">Favourites: Erased, Monster and ONE PIECE!</p>
+
+
+    </div>
+    
+  </section>
+</body>
+</html>
