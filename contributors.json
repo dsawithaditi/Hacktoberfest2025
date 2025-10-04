@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Gurram Chaitanya Lahari",
+    "occupation": "Full Stack Developer",
+    "place": "Tenali, India",
+    "bio": "Aspiring full-stack developer passionate about data analytics, machine learning, and building impactful web applications.",
+    "github_profile_url": "https://github.com/gurram-lahari",
+    "project_netlify_link": "https://splendorous-manatee-59a2b8.netlify.app/",
+    "tags": ["animated", "light-theme"]
   }
 ]
