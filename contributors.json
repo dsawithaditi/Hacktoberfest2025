@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Uttam Bansal",
+    "occupation": "Backend Web Developer",
+    "place": "Uttar-Pradesh, India",
+    "bio": "Dedicated backend developer with a passion for building scalable web applications and optimizing server-side performance.",
+    "github_profile_url": "https://github.com/Uttam345",
+    "project_netlify_link": "https://uttam-bansal-profile-card.netlify.app/",
+    "tags": ["backend", "dark-theme"]
   }
 ]
