@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Aditya Kumar",
+    "occupation": "Software Developer",
+    "place": "India",
+    "bio": "Passionate about creating innovative solutions and building amazing software experiences.",
+    "github_profile_url": "https://github.com/aditya",
+    "project_netlify_link": "https://aditya-profile-card.netlify.app/",
+    "tags": ["minimalist", "animation", "light-theme"]
   }
 ]
