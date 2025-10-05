@@ -61,5 +61,15 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Himanshu Sharma",
+    "occupation": "Frontend Web Developer",
+    "place": "Greater Noida, India",
+    "bio": "Frontend developer focused on clean code, pixel-perfect UIs, and seamless user experiences.",
+    "github_profile_url": "https://github.com/himma08",
+    "project_netlify_link": "https://himanshu-08.netlify.app/",
+    "tags": ["aminimalist", "dark-theme"]
   }
+
 ]
