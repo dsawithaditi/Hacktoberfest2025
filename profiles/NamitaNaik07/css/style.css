@@ -1,0 +1,178 @@
+/* Global styles for the body and font */
+body {
+    /* Deep space background: dark base */
+    background-color: #030712; 
+    
+    /* *** CSS Parallax Layers ***
+    We use multiple background images combined with background-attachment: fixed 
+    to simulate depth (parallax effect).
+    
+    Layer 1 (Closest): A soft purple/blue nebula glow.
+    Layer 2 (Middle): Random, medium-sized white stars.
+    Layer 3 (Farthest): Tiny, sparse white stars.
+    */
+    background-image: 
+        /* Layer 1: Nebula Glow (Large, soft radial gradients) */
+        radial-gradient(circle 900px at 75% 25%, rgba(139, 92, 246, 0.15), transparent),
+        radial-gradient(circle 600px at 25% 85%, rgba(56, 189, 248, 0.15), transparent),
+        /* Layer 2: Medium Stars */
+        radial-gradient(2px 2px at 100px 150px, #ffffff, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 50% 50%, #ffffff, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 80% 90%, #ffffff, rgba(255, 255, 255, 0)),
+        /* Layer 3: Tiny Stars */
+        radial-gradient(1px 1px at 400px 400px, #ffffff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 600px 100px, #ffffff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 20% 70%, #ffffff, rgba(255, 255, 255, 0));
+
+    /* Crucial for parallax: fixed background relative to the viewport */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    /* Standard layout and font styles */
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #f8fafc;
+    padding: 20px;
+}
+
+/* Key Glassmorphism Card Style */
+.profile-card {
+    width: 90%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 25px;
+    
+    /* Core Glassmorphism properties */
+    background: rgba(30, 0, 70, 0.3); 
+    backdrop-filter: blur(18px); 
+    -webkit-backdrop-filter: blur(18px); 
+    border: 1px solid rgba(165, 180, 252, 0.2); 
+    
+    /* Continuous subtle nebula glow */
+    box-shadow: 0 0 40px rgba(109, 40, 217, 0.3); 
+    
+    text-align: center;
+    /* Use a perspective transform to enhance the 3D depth impression */
+    transform: translateZ(0); 
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+/* Solar-themed Hover Animation (Cosmic Energy Burst) */
+.profile-card:hover {
+    /* Lift the card slightly and intensify the glow */
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.7), 
+                0 0 20px rgba(139, 92, 246, 0.4); 
+}
+
+/* Header and Typography */
+.card-header h1 {
+    font-size: 2.4rem;
+    margin: 10px 0 5px;
+    color: #a5b4fc; 
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* Avatar Styling (Celestial Orb) */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #818cf8; 
+    box-shadow: 0 0 0 6px rgba(129, 140, 248, 0.3);
+}
+
+/* Bio Section */
+.bio-section p {
+    font-style: italic;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.location {
+    color: #a5b4fc; 
+    font-size: 1rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location i {
+    margin-right: 10px;
+    color: #3b82f6; 
+}
+
+/* Tags Section (Nebula Badges) */
+.tags-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.tag {
+    background-color: rgba(139, 92, 246, 0.6); 
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+    transition: background-color 0.4s, transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tag:hover {
+    background-color: #8b5cf6; 
+    transform: scale(1.05);
+}
+
+/* Social Links (Comet Trails) */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #a5b4fc;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.4s, transform 0.4s;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #38bdf8; 
+    transform: scale(1.3) rotate(5deg); 
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+    .card-header h1 {
+        font-size: 2rem;
+    }
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .social-links a {
+        font-size: 1.6rem;
+    }
+}
