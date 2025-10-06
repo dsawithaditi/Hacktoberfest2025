@@ -61,5 +61,13 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Akshay KS",
+    "occupation": "Software Engineer",
+    "place": "Coimbatore, India",
+    "bio": "Building accessible, performant interfaces; open to collaboration.",
+    "github_profile_url": "https://github.com/akshayks13",
+    "tags": ["dark-theme", "minimalist", "open-source"]
   }
 ]
