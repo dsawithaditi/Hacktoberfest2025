@@ -1,0 +1,96 @@
+:root{
+  --bg:#07070a;
+  --card:#0f1115;
+  --muted:#9aa4b2;
+  --accent:#7c5cff;
+  --accent-2:#00e0a1;
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.02);
+}
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0; font-family:Inter, Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background: linear-gradient(180deg,#020204 0%, #081018 100%);
+  display:flex; align-items:center; justify-content:center; padding:36px;
+  color:#e6eef8;
+}
+.wrap{width:980px; max-width:96vw}
+
+.card{
+  position:relative;
+  display:flex; gap:28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) padding-box,
+    linear-gradient(135deg, rgba(124,92,255,0.25), rgba(0,224,161,0.25)) border-box;
+  border-radius:14px; padding:22px; align-items:stretch; border:1px solid transparent;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.7);
+  transform-origin:center center; transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.card:hover{ transform: translateY(-6px); box-shadow: 0 18px 50px rgba(2,6,23,0.85); }
+.card::after{
+  content:""; position:absolute; inset:0; pointer-events:none; border-radius:inherit;
+  background: radial-gradient(60% 40% at 50% -10%, rgba(124,92,255,0.14), transparent 60%);
+}
+
+.card-left{ width:320px; display:flex; flex-direction:column; gap:12px; align-items:center; text-align:center; padding:8px; }
+
+.avatar{ position:relative; width:140px; height:140px; border-radius:50%; overflow:hidden; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent), var(--accent-2)); padding:6px; box-shadow:0 6px 20px rgba(0,0,0,0.6); }
+.avatar::after{ content:""; position:absolute; inset:-10%; border-radius:50%; filter: blur(22px); background: radial-gradient(closest-side, rgba(124,92,255,0.3), transparent 70%); z-index:0 }
+.avatar img{ position:relative; z-index:1; width:100%; height:100%; object-fit:cover; border-radius:50%; background:#fff }
+
+.name{ margin:6px 0 0; font-size:22px; letter-spacing:0.2px }
+.role{ margin:0; color:var(--muted); font-size:13px }
+
+.tags{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:6px }
+.tags span{ font-size:12px; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); color:var(--muted); border:1px solid rgba(255,255,255,0.06); transition:background .15s ease, border-color .15s ease, color .15s ease }
+.tags span:hover{ background:rgba(124,92,255,0.08); border-color:rgba(124,92,255,0.25); color:#d9defa }
+
+.links{ display:flex; gap:12px; margin-top:10px }
+.links a{ position:relative; color:var(--accent-2); text-decoration:none; font-weight:600; font-size:13px; background:transparent; padding:6px 10px; border-radius:8px }
+.links a::after{ content:""; position:absolute; left:10px; right:10px; bottom:5px; height:2px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); transform:scaleX(0); transform-origin:left; transition:transform .18s ease }
+.links a:hover::after, .links a:focus-visible::after{ transform:scaleX(1) }
+
+.card-right{ flex:1; display:flex; flex-direction:column; gap:12px; padding:8px 6px }
+.stats{ display:flex; gap:18px; justify-content:flex-end }
+.stats > div{ text-align:right }
+.num{ display:block; font-size:20px; font-weight:700 }
+.lbl{ display:block; font-size:12px; color:var(--muted) }
+.bio{
+  color:rgba(230,238,248,0.94);
+  line-height:1.35;
+  margin-top:10px;
+  font-size:20px; /* larger by default */
+  font-weight:600;
+  max-width:62ch; /* keep readable line length */
+  letter-spacing:0.2px;
+}
+
+.cta{ margin-top:auto; display:flex; gap:12px; justify-content:flex-end }
+.cta button{ background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#031022; border:0; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer; box-shadow: 0 6px 18px rgba(0,224,161,0.22); transition: transform .12s ease, box-shadow .12s ease }
+.cta button:hover{ transform: translateY(-1px); box-shadow: 0 10px 22px rgba(0,224,161,0.28) }
+.cta button:active{ transform: translateY(0); box-shadow: 0 6px 18px rgba(0,224,161,0.22) }
+.cta .cv{ background:transparent; color:var(--muted); align-self:center; text-decoration:none; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.03) }
+
+.card:active{ transform: translateY(-2px) scale(.998) }
+
+@media (max-width:880px){
+  .card{ flex-direction:column; align-items:center }
+  .card-left{ width:100%; }
+  .stats{ justify-content:center }
+  .cta{ justify-content:center }
+}
+
+@media (max-width:520px){
+  .bio{ font-size:16px; max-width:100%; text-align:center }
+}
+
+button:focus-visible, a:focus-visible, .tags span:focus-visible{
+  outline: 2px solid rgba(124,92,255,0.6);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .card, .links a::after, .cta button{ transition: none !important }
+}
