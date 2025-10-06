@@ -61,5 +61,15 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
-  }
+  },
+  {
+  "name": "Nisha Verma",
+  "occupation": "Computer Science Student",
+  "place": "Ghaziabad, India",
+  "bio": "Computer Science student passionate about Java development, exploring DevOps, and contributing to open source projects while learning new technologies.",
+  "github_profile_url": "https://github.com/xnisha-verma",
+  "project_netlify_link": "https://nisha-profile-card.netlify.app/",
+  "tags": ["minimalist", "gradient-color", "animated"]
+},
+
 ]
