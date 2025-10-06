@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Harsh Gupta",
+    "occupation": "Student",
+    "place": "Uttarpradesh, India",
+    "bio": "Student with a keen interest in web development and a passion for learning new technologies.",
+    "github_profile_url": "https://github.com/harshgupta2125",
+    "project_netlify_link": "https://harshg-profile-card.netlify.app/",
+    "tags": ["animated", "light-theme"]
   }
 ]
