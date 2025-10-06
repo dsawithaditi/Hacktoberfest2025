@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Profile Card</title>
+    <!-- Link to Google Font (Inter) for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Link to custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Main container for the profile card -->
+    <div id="profile-card" class="profile-card">
+        <!-- Card Header with Avatar and Title -->
+        <header class="card-header">
+            <!-- Replace this URL with your actual profile picture -->
+            <img 
+                src="Namitanaik07.jpg" 
+                alt="Profile Avatar" 
+                class="avatar"
+                onerror="this.src='https://placehold.co/120x120/1f2937/FFFFFF?text=Error';"
+            >
+            <h1>Namita Naik</h1>
+            <p class="title">Full-Stack Developer | Open-Source Contributor</p>
+        </header>
+
+        <!-- Bio and Location -->
+        <section class="bio-section">
+            <p>Building responsive and beautiful user experiences one line of code at a time. Thrilled to contribute to Hacktoberfest 2025!</p>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karnataka, India</span>
+            </div>
+        </section>
+
+        <!-- Skill Tags -->
+        <section class="tags-section">
+            <span class="tag">React</span>
+            <span class="tag">Express</span>
+            <span class="tag">NodeJS</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">MongoDB</span>
+        </section>
+
+        <!-- Social Links -->
+        <footer class="social-links">
+            <a href="#" target="_blank" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Twitter Profile">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </footer>
+    </div>
+    
+    <!-- Optional JavaScript file for interactivity -->
+    <script src="js/main.js"></script>
+</body>
+</html>
