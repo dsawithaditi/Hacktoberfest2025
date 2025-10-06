@@ -1,0 +1,31 @@
+/* Card styles modeled after provided design */
+:root{
+  --bg:#0f0f10;
+  --card:#141415;
+  --muted:#9a9a9a;
+  --accent:#9eff3c;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#0b0b0c 0%, #111 100%); color:#fff; margin:0; display:flex; align-items:center; justify-content:center; min-height:100vh}
+.card-wrap{padding:32px}
+.card{width:340px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04)); border-radius:28px; box-shadow: 0 12px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02); padding:28px; position:relative; overflow:hidden}
+.card:after{content:''; position:absolute; left:16px; right:16px; bottom:-18px; height:52px; background:linear-gradient(180deg, rgba(158,255,60,0.25), rgba(158,255,60,0.45)); border-radius:16px; z-index:0}
+.card *{position:relative; z-index:1}
+.card-top{display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--muted); margin-bottom:10px}
+.status{color:var(--accent); display:flex; gap:8px; align-items:center}
+.avatar-wrap{display:flex; justify-content:center; margin:6px 0 4px}
+.avatar{width:110px; height:110px; border-radius:50%; border:6px solid rgba(0,0,0,0.45); box-shadow: 0 6px 24px rgba(0,0,0,0.6); background:#222}
+.name{font-size:22px; text-align:center; margin:8px 0 0}
+.role{font-size:13px; text-align:center; color:var(--muted); margin:4px 0 16px}
+.socials{display:flex; gap:12px; justify-content:center; margin-bottom:18px}
+.sbtn{width:44px; height:44px; border-radius:50%; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06)); border:1px solid rgba(255,255,255,0.03); color:#ddd; cursor:pointer; font-weight:600}
+.actions{display:flex; gap:12px; justify-content:center; margin-bottom:16px}
+.btn{padding:10px 16px; border-radius:12px; background:var(--glass); border:1px solid rgba(255,255,255,0.03); color:#e7e7e7; cursor:pointer}
+.btn.primary{background:linear-gradient(180deg,#2a2a2a,#0e0e0e); box-shadow: inset 0 1px 0 rgba(255,255,255,0.02)}
+.bottom-pill{position:relative; text-align:center; margin-top:8px; padding:12px 14px; border-radius:14px; background:#8bf04a; color:#0c0c0c; font-weight:600; box-shadow:0 6px 18px rgba(139,240,74,0.18)}
+
+/* Responsive small screens */
+@media (max-width:420px){
+  .card{width:86vw;padding:20px}
+}

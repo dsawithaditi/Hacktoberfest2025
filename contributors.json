@@ -62,4 +62,14 @@
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
   }
+  ,
+  {
+    "name": "Sameer",
+    "occupation": "Product Designer",
+    "place": "India",
+    "bio": "Product Designer focused on user-centric interfaces and delightful micro-interactions.",
+    "github_profile_url": "https://github.com/sameer",
+    "project_netlify_link": "profiles/sameer/index.html",
+    "tags": ["dark-theme", "glassmorphism"]
+  }
 ]
