@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
-  }
+  },
+  {
+  "name": "Mayur Galhate",
+  "occupation": "CSE Student",
+  "place": "India",
+  "bio": "Building creative web projects!",
+  "github_profile_url": "https://github.com/mayurgalhate",
+  "project_netlify_link": "https://mayurr-profile-card.netlify.app",
+  "tags": ["minimalist", "dark-theme", "animation"]
+}
 ]
