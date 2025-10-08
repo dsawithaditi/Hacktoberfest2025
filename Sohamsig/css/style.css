@@ -1,0 +1,78 @@
+/* Reset and body */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for centering */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Profile card */
+.profile-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.profile-card.show { opacity:1; transform:translateY(0); }
+.profile-card:hover { transform: scale(1.05); box-shadow: 0 12px 35px rgba(0,0,0,0.4); }
+
+.profile-image img { width:120px; height:120px; border-radius:50%; border:4px solid #4a47a3; object-fit:cover; margin-bottom:15px; }
+
+.name { font-size:22px; font-weight:600; color:#333; }
+.role { font-size:14px; color:#777; margin-bottom:20px; }
+
+.skills h3 { margin-bottom:10px; color:#4a47a3; }
+.skills ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+.skills li { background:#4a47a3; color:#fff; padding:5px 10px; border-radius:5px; font-size:12px; }
+
+.social-links { margin-top:20px; }
+.social-links a { text-decoration:none; color:#4a47a3; margin:0 8px; font-weight:500; transition:color 0.3s; }
+.social-links a:hover { color:#6e61c7; }
+
+/* Dark Mode */
+body.dark-mode { background: linear-gradient(135deg,#0f0f0f,#2c2c2c); }
+body.dark-mode .profile-card { background-color: #1c1c1c; color:#eee; }
+body.dark-mode .skills li { background-color:#6e61c7; }
+body.dark-mode .social-links a { color:#9a88ff; }
+body.dark-mode .social-links a:hover { color:#c0b0ff; }
+
+/* Dark Mode Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  background-color:#4a47a3;
+  color:#fff;
+  transition: background 0.3s;
+}
+.dark-mode-toggle:hover { background-color:#6e61c7; }
+
+/* Responsive */
+@media(max-width:400px){
+  .profile-card{padding:20px;}
+  .skills ul{gap:5px;}
+  .social-links a{margin:0 5px;}
+}
