@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  width: 320px;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.occupation {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.bio {
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #ff9800;
+}
+
+.skills {
+  margin-top: 15px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #fff;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin: 5px 4px;
+  font-size: 12px;
+}
