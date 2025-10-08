@@ -1,0 +1,7 @@
+from collections import Counter
+
+def char_frequency(string):
+    return dict(Counter(string))
+
+print(char_frequency("engineering"))
+# Output: {'e': 3, 'n': 3, 'g': 2, 'i': 2, 'r': 1}
