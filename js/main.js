@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let displayedCount = 0;
   const batchSize = 12;
   let isLoading = false;
+  
+  // Pagination variables
+  let currentPage = 1;
+  const itemsPerPage = 12;
+  let totalPages = 1;
 
   /**
    * Creates a single profile card element with the new "View Project" button.
@@ -61,6 +66,70 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
     return card;
+  }
+
+  // --- Pagination Functions ---
+  function updatePagination() {
+    const paginationContainer = document.getElementById("pagination-container");
+    const prevBtn = document.getElementById("prev-page");
+    const nextBtn = document.getElementById("next-page");
+    const pageNumbers = document.getElementById("page-numbers");
+    
+    if (totalPages <= 1) {
+      paginationContainer.style.display = "none";
+      return;
+    }
+    
+    paginationContainer.style.display = "flex";
+    
+    // Update prev/next buttons
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+    
+    // Generate page numbers
+    pageNumbers.innerHTML = "";
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+    
+    for (let i = startPage; i <= endPage; i++) {
+      const pageBtn = document.createElement("button");
+      pageBtn.className = `page-number ${i === currentPage ? "active" : ""}`;
+      pageBtn.textContent = i;
+      pageBtn.addEventListener("click", () => goToPage(i));
+      pageNumbers.appendChild(pageBtn);
+    }
+  }
+  
+  function goToPage(page) {
+    if (page < 1 || page > totalPages || page === currentPage) return;
+    
+    currentPage = page;
+    displayPage();
+    updatePagination();
+    
+    // Scroll to top of contributors container
+    document.getElementById("contributors-container").scrollIntoView({ 
+      behavior: "smooth", 
+      block: "start" 
+    });
+  }
+  
+  function displayPage() {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const pageContributors = displayedContributors.slice(startIndex, endIndex);
+    
+    container.innerHTML = "";
+    pageContributors.forEach((contributor) => {
+      const card = createProfileCard(contributor);
+      container.appendChild(card);
+      cardObserver.observe(card);
+    });
   }
 
   // --- Card Creation & Display Logic (Largely unchanged) ---
@@ -119,6 +188,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Other Event Listeners ---
   searchInput.addEventListener("input", filterContributors);
+
+  // Pagination Event Listeners
+  document.getElementById("prev-page").addEventListener("click", () => {
+    if (currentPage > 1) goToPage(currentPage - 1);
+  });
+  
+  document.getElementById("next-page").addEventListener("click", () => {
+    if (currentPage < totalPages) goToPage(currentPage + 1);
+  });
 
   // Detail Modal
   detailModalCloseBtn.addEventListener("click", closeDetailModal);
@@ -196,12 +274,21 @@ document.addEventListener("DOMContentLoaded", () => {
         tags.includes(searchTerm)
       );
     });
-    container.innerHTML = "";
-    displayedCount = 0;
+    
+    // Reset pagination
+    currentPage = 1;
+    totalPages = Math.ceil(displayedContributors.length / itemsPerPage);
+    
     noResultsMsg.style.display =
       displayedContributors.length === 0 ? "block" : "none";
-    sentinel.style.display = "block";
-    displayNextBatch();
+    
+    if (displayedContributors.length > 0) {
+      displayPage();
+    } else {
+      container.innerHTML = "";
+    }
+    
+    updatePagination();
   }
   async function initialize() {
     try {
@@ -215,13 +302,13 @@ document.addEventListener("DOMContentLoaded", () => {
         allContributors = [];
       }
       displayedContributors = [...allContributors];
-      const intersectionObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !isLoading) {
-          displayNextBatch();
-        }
-      });
-      intersectionObserver.observe(sentinel);
-      displayNextBatch();
+      
+      // Initialize pagination
+      currentPage = 1;
+      totalPages = Math.ceil(displayedContributors.length / itemsPerPage);
+      
+      displayPage();
+      updatePagination();
     } catch (error) {
       console.error("Failed to load or parse contributors.json:", error);
       container.innerHTML = `<p class="no-results-message" style="display: block;">Could not load contributor data.</p>`;

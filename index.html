@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacktoberfest - Developer Profile Card Showcase</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +54,16 @@
             <div id="sentinel"></div>
             <div id="loader"></div>
             <p id="no-results" class="no-results-message">No contributors found matching your search.</p>
+            
+            <div id="pagination-container" class="pagination-container">
+                <button id="prev-page" class="pagination-btn" disabled>
+                    <i class="ri-arrow-left-line"></i> Previous
+                </button>
+                <div id="page-numbers" class="page-numbers"></div>
+                <button id="next-page" class="pagination-btn">
+                    Next <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
         </main>
     </div>
 
@@ -85,6 +97,39 @@
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Profile Showcase</h3>
+                    <p>A showcase of creative developer profile cards from the open-source community. Built for Hacktoberfest 2025.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="https://github.com/dsawithaditi/Hacktoberfest2025#how-to-contribute" target="_blank">Contribute</a></li>
+                        <li><a href="https://github.com/dsawithaditi/Hacktoberfest2025" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/dsawithaditi/Hacktoberfest2025" target="_blank" title="GitHub">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                        <a href="https://github.com/dsawithaditi" target="_blank" title="Creator">
+                            <i class="ri-user-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hacktoberfest Profile Showcase. Made with ❤️ for the open-source community.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
