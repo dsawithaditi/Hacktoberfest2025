@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Srijit",
+    "occupation": "Full Stack Developer",
+    "place": "Bengaluru, India",
+    "bio": "Passionate developer creating innovative solutions with modern technologies. Love building scalable applications and contributing to open source projects.",
+    "github_profile_url": "https://github.com/student-srijit",
+    "project_netlify_link": "profiles/srijit-dev/index.html",
+    "tags": ["glassmorphism", "interactive", "gradient", "modern"]
   }
 ]
