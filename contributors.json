@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Harshit Kumar",
+    "occupation": "Full stack developer",
+    "place": "Kota, India",
+    "bio": "I am a passionate Full Stack Developer with expertise in building scalable and efficient web applications. Proficient in both front-end and back-end technologies, I specialize in creating seamless user experiences while ensuring robust server-side functionality. I am always eager to learn new technologies to deliver innovative solutions. My goal is to develop high-quality software that bridges the gap between design and functionality, solving real-world problems.",
+    "github_profile_url": "https://github.com/KumarHarshit3603",
+    "project_netlify_link": "https://harshit-profile-card.netlify.app/",
+    "tags": ["animated", "light-theme"]
   }
 ]
