@@ -1,5 +1,14 @@
 [
   {
+    "name": "Aayush",
+    "occupation": "Student",
+    "place": "Bhubaneswar, India",
+    "bio": "Aspiring full-stack developer and open-source enthusiast.",
+    "github_profile_url": "https://github.com/aayushj19",
+    "project_netlify_link": "https://moonlit-maamoul-bbe0ad.netlify.app/",
+    "tags": ["minimalist", "animation", "light-theme"]
+  },
+  {
     "name": "Aditi Sharma",
     "occupation": "Software Engineer",
     "place": "Kolkata, India",
