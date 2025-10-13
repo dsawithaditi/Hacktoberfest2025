@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Moulika",
+    "occupation": "Full-Stack Developer",
+    "place": "Andhra Pradesh, India",
+    "bio":  "Building elegant, functional and user-friendly digital solutions.",
+    "github_profile_url": "https://github.com/Moulika-21",
+    "project_netlify_link": "https://moulika-profile-card.netlify.app/",
+    "tags": ["minimalist", "animation", "glassmorphism", "vibrant-gradient"]
   }
 ]
