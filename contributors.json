@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Manglam Vats",
+    "occupation": "SDE T",
+    "place": "Banglore, India",
+    "bio": "I build thoughtful web experiences and tools. Passionate about clean architecture, delightful UI and practical automation.",
+    "github_profile_url": "https://github.com/Vatsmanglam",
+    "project_netlify_link": "https://manglam-profile-card-2025.netlify.app/",
+    "tags": ["animated", "light-theme"]
   }
 ]

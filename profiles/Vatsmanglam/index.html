@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manglam | Software Dev</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <!-- page wrapper -->
+  <main class="page">
+    <!-- particle background (canvas injected by JS) -->
+    <div id="bg-canvas-wrap" aria-hidden="true"></div>
+
+    <article class="profile-card" aria-label="Profile card of Manglam">
+      <div class="card-shine" aria-hidden="true"></div>
+
+      <header class="card-top">
+        <div class="avatar-ring" aria-hidden="true">
+          <div class="avatar-stroke"></div>
+          <div class="avatar-inner">
+            <img src="./assets/Manglam.png" alt="Mangalam profile picture" class="avatar-img" />
+          </div>
+        </div>
+      </header>
+
+      <section class="card-body">
+        <h1 class="name">Manglam</h1>
+        <h2 class="title">Software Developer</h2>
+        <p class="bio">I build thoughtful web experiences and tools. Passionate about clean architecture, delightful UI and practical automation.</p>
+      </section>
+
+      <nav class="card-socials" aria-label="Social links">
+        <ul class="social-list">
+          <li><a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </nav>
+
+      <footer class="card-cta">
+        <a class="cta-btn" href="mailto:hello@example.com">Contact Me</a>
+      </footer>
+
+      <!-- floating accent glow under the card -->
+      <div class="card-glow" aria-hidden="true"></div>
+
+      <!-- ephemeral particle holder for bursts etc -->
+      <div class="ephemeral" aria-hidden="true"></div>
+    </article>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
