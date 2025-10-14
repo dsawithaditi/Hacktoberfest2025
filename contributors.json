@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Anubhav Pandey",
+    "occupation": "Full Stack Developer",
+    "place": "Banglore, India",
+    "bio": "Full-stack developer. I try to build cool things on the web. I also think the F-22 and Su-57 are peak engineering. I enjoy making my code as efficient as their aerodynamics.",
+    "github_profile_url": "https://github.com/EXP1505",
+    "project_netlify_link": "https://exp1505-profilecard.netlify.app/",
+    "tags": ["aviation", "dark-theme","minimalist","neon"]
   }
 ]

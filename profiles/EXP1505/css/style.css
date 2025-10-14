@@ -1,0 +1,67 @@
+@font-face { font-family: "Jet"; src: local("JetBrains Mono"), local("Consolas"), local("Menlo"); }
+:root{ --bg:#0b1116; --panel:#0f1720cc; --accent:#1be7ff; --accent-2:#00ff94; --text:#e6f1ff; --muted:#9fb3c8; --warn:#ffce3a; --glow:0 0 0 2px color-mix(in srgb,var(--accent),transparent 70%),0 0 24px color-mix(in srgb,var(--accent),transparent 50%); --radius:18px }
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{ margin:0; font-family: Jet, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: radial-gradient(1000px 600px at 10% 10%, #0e1722 0%, #0b1116 60%), radial-gradient(1200px 800px at 100% 100%, #071018 0%, #0b1116 70%); color:var(--text); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="%231be7ff" stroke-width="1.5"><path d="M3 12 L14 6 L12 12 L14 18 Z" fill="%23e6f1ff"/><path d="M3 12 L1.6 10.4 L2 12 L1.6 13.6 Z" fill="%23ff6a00" stroke="none"/><circle cx="16" cy="12" r="2" fill="%2300ff94" stroke="none"/></g></svg>') 2 12, crosshair }
+
+.sky{ min-height:100%; display:grid; place-items:center; padding:24px }
+
+.card{ position:relative; width:min(92vw, 680px); border-radius:var(--radius); background:linear-gradient(160deg, color-mix(in srgb,var(--panel),transparent 10%), color-mix(in srgb,#0b1b24,transparent 10%)); border:1px solid color-mix(in srgb,var(--accent),transparent 70%); box-shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.02); overflow:hidden; padding:28px 24px 22px; backdrop-filter: blur(10px) saturate(120%); transform-style:preserve-3d; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease }
+.card:hover{ box-shadow:0 18px 46px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.03) }
+
+.hud-overlay{ pointer-events:none; position:absolute; inset:0; background:
+  linear-gradient(transparent 31px, rgba(27,231,255,.06) 32px) repeat-y,
+  linear-gradient(90deg, transparent 31px, rgba(27,231,255,.06) 32px) repeat-x; background-size:100% 32px, 32px 100%; mask: radial-gradient(80% 70% at 50% 50%, #000 60%, transparent 100%) }
+
+.radar{ position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%; background:
+  radial-gradient(circle at center, rgba(0,255,148,.15), transparent 45%),
+  conic-gradient(from 0deg, rgba(27,231,255,.0) 0 88%, rgba(27,231,255,.28) 94%, rgba(27,231,255,.0) 100%),
+  radial-gradient(circle at center, rgba(27,231,255,.12) 1px, transparent 1px) 0 0/18px 18px;
+  border:1px solid rgba(27,231,255,.25); filter: blur(.2px); animation: sweep 6s linear infinite }
+@keyframes sweep{ to{ transform: rotate(360deg) } }
+
+.header{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px }
+.badge{ padding:6px 10px; border:1px dashed color-mix(in srgb,var(--accent-2),transparent 50%); color:var(--accent-2); border-radius:10px; font-size:12px; letter-spacing:.2em; text-transform:uppercase }
+.callsign{ padding:6px 10px; border:1px solid color-mix(in srgb,var(--warn),transparent 50%); color:var(--warn); border-radius:10px; font-size:12px; letter-spacing:.2em }
+
+.avatar{ position:relative; width:108px; height:108px; margin:6px auto 14px; border-radius:50%; display:grid; place-items:center; color:var(--text); font-weight:700; letter-spacing:.08em; background:
+  radial-gradient(80% 80% at 30% 30%, rgba(27,231,255,.25), transparent 40%),
+  linear-gradient(135deg, #0e2430 0%, #0c1a23 60%),
+  radial-gradient(circle at 60% 70%, rgba(0,255,148,.15), transparent 40%);
+  border:1px solid color-mix(in srgb,var(--accent),transparent 60%); box-shadow: var(--glow) }
+.avatar img{ width:100%; height:100%; object-fit:cover; border-radius:50%; display:block }
+
+.name{ margin:0; text-align:center; font-size:clamp(20px, 3.2vw, 28px) }
+.subtitle{ margin:8px 0 16px; text-align:center; color:var(--muted); font-size:14px }
+
+.stats{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:0 0 18px }
+.chip{ font-size:12px; padding:8px 10px; border-radius:999px; border:1px solid color-mix(in srgb,var(--accent),transparent 60%); color:color-mix(in srgb,var(--text),var(--accent) 20%); background:linear-gradient(180deg, rgba(15,23,32,.7), rgba(10,18,26,.7)); box-shadow: inset 0 1px 0 rgba(255,255,255,.06) }
+
+.actions{ display:flex; align-items:center; justify-content:space-between; gap:14px; margin-top:8px }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:12px 16px; border-radius:12px; text-decoration:none; color:#001318; background:linear-gradient(180deg, var(--accent) 0%, color-mix(in srgb,var(--accent),#ffffff 25%) 100%); border:1px solid color-mix(in srgb,var(--accent),transparent 40%); box-shadow: 0 8px 18px rgba(27,231,255,.18); min-width:120px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; transition: transform .15s ease, box-shadow .15s ease, background .2s ease }
+.btn, a, button{ cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="%231be7ff" stroke-width="1.5"><path d="M3 12 L14 6 L12 12 L14 18 Z" fill="%23e6f1ff"/><path d="M3 12 L1.6 10.4 L2 12 L1.6 13.6 Z" fill="%23ff6a00" stroke="none"/><circle cx="16" cy="12" r="2" fill="%2300ff94" stroke="none"/></g></svg>') 2 12, pointer }
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(27,231,255,.23) }
+.btn:active{ transform: translateY(0); box-shadow: 0 8px 18px rgba(27,231,255,.18) }
+
+.links{ display:flex; align-items:center; gap:12px; margin-left:auto }
+.icon{ width:40px; height:40px; display:inline-block; border-radius:10px; border:1px solid color-mix(in srgb,var(--accent),transparent 60%); background: linear-gradient(180deg, rgba(15,23,32,.8), rgba(10,18,26,.8)); position:relative; overflow:hidden; transition:border-color .2s ease, box-shadow .2s ease }
+.icon:hover{ border-color: color-mix(in srgb,var(--accent),transparent 30%); box-shadow: var(--glow) }
+.icon::after{ content:""; position:absolute; inset:0; background-position:center; background-repeat:no-repeat; background-size:58% }
+.icon.github::after{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="98" height="96" viewBox="0 0 98 96" fill="%23a6d8ff"><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.06 3.316-2.362 0-1.164-.043-4.243-.067-8.337-13.59 2.953-16.453-6.56-16.453-6.56-2.209-5.61-5.392-7.11-5.392-7.11-4.406-3.012.333-2.952.333-2.952 4.873.342 7.438 5.017 7.438 5.017 4.33 7.416 11.353 5.276 14.118 4.034.436-3.138 1.695-5.276 3.084-6.49-10.847-1.24-22.242-5.424-22.242-24.135 0-5.33 1.908-9.698 5.034-13.116-.505-1.242-2.186-6.26.477-13.045 0 0 4.116-1.316 13.49 5.012a46.71 46.71 0 0 1 12.29-1.676c4.17.02 8.37.57 12.293 1.676 9.37-6.329 13.483-5.012 13.483-5.012 2.669 6.785.988 11.803.483 13.045 3.133 3.418 5.028 7.787 5.028 13.116 0 18.756-11.41 22.888-22.285 24.108 1.759 1.531 3.32 4.547 3.32 9.17 0 6.623-.057 11.964-.057 13.596 0 1.313.877 2.853 3.339 2.36C84.02 89.374 98 70.966 98 49.217 98 22 76.137 0 49.123 0h-.269Z"/></svg>') }
+.icon.instagram::after{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="none"><rect x="64" y="64" width="320" height="320" rx="80" ry="80" stroke="%23ff3b81" stroke-width="28"/><circle cx="224" cy="224" r="80" stroke="%231be7ff" stroke-width="28" fill="none"/><circle cx="320" cy="128" r="18" fill="%23ffce3a"/></svg>') }
+.icon.linkedin::after{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%231be7ff"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-339a53.7 53.7 0 1 1 0-107.4 53.7 53.7 0 0 1 0 107.4zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.6 42.7-48.3 87.8-48.3 93.9 0 111.2 61.8 111.2 142.3V448z"/></svg>') }
+
+@media (max-width: 520px){
+  .actions{ flex-direction:column; align-items:stretch }
+  .links{ margin-left:0; width:100%; justify-content:center }
+  .btn{ width:100% }
+}
+
+@media (min-width: 900px){
+  .card{ width:min(80vw, 760px) }
+}
+
+/* focus states */
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px }
+
+
