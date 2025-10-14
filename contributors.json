@@ -61,5 +61,15 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
-  }
+  },
+  {
+  "name": "Maheswari",
+  "occupation": "Full-Stack Developer | DevOps Enthusiast",
+  "place": "India",
+  "bio": "Passionate about clean code, automation, and exploring cloud technologies & modern JavaScript frameworks. Always learning, experimenting, and building something new!",
+  "github_profile_url": "https://github.com/maheswari2048",
+  "project_netlify_link": "https://maheswari-profile-card.netlify.app/",
+  "tags": ["interactive", "dark-theme", "modern"]
+}
+
 ]
