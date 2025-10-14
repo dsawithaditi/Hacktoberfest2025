@@ -1,0 +1,195 @@
+:root {
+    --primary-color: #85f1ff;
+    --secondary-color: #79b0f7;
+    --background-start: #e0f2f5;
+    --background-mid: #bbb4fe;
+    --background-end: #a7d8e8;
+    --text-dark: #333;
+    --text-light: #6a6a6a;
+    --card-background: rgba(255, 255, 255, 0.6);
+    --shadow-color: rgba(100, 100, 150, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--background-start), var(--background-mid), var(--background-end));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.profile-card {
+    position: relative;
+    width: 340px;
+    background: var(--card-background);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease-out;
+    animation: fadeInDown 1s ease-out forwards;
+    opacity: 0;
+    overflow: hidden;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.profile-image-container {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    animation: popIn 0.8s 0.2s ease-out forwards;
+    transform: scale(0);
+}
+
+.profile-image-container img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover img {
+    transform: scale(1.08) rotate(5deg);
+}
+
+.card-body .name {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.card-body .title {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.card-body .bio {
+    font-size: 0.95em;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.card-socials {
+    margin: 25px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.social-links li {
+    animation: popIn 0.5s ease-out forwards;
+    transform: scale(0);
+}
+
+.social-links li:nth-child(1) { animation-delay: 0.5s; }
+.social-links li:nth-child(2) { animation-delay: 0.6s; }
+.social-links li:nth-child(3) { animation-delay: 0.7s; }
+.social-links li:nth-child(4) { animation-delay: 0.8s; }
+
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.4em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.card-footer {
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: popIn 0.8s 0.9s ease-out forwards;
+    transform: scale(0);
+}
+
+.cta-button:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(162, 121, 247, 0.5);
+}
+
+@keyframes popIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.shine::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 300%;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0));
+    transform: translate(-50%, -50%) rotate(35deg);
+    top: var(--shine-y, -100%);
+    left: var(--shine-x, -100%);
+    transition: top 0.1s ease-out, left 0.1s ease-out;
+}
