@@ -1,0 +1,95 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: linear-gradient(145deg, #0e0f12, #16181d);
+  color: #e5e9f0;
+}
+
+/* === Card Container === */
+.mainFrame {
+  background: #1b1e24;
+  border-radius: 20px;
+  padding: 2rem;
+
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  background: rgba(27,30,36,0.8);
+}
+
+.mainFrame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(76, 98, 124, 0.25);
+}
+
+/* === Profile Image === */
+.profile-img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  
+  object-fit: cover;
+  border: 2px solid rgba(136,192,208,0.5);
+  margin-bottom: 1rem;
+  transition: 0.3s ease;
+}
+
+.profile-img img:hover {
+  transform: scale(1.05);
+  border-color: #88c0d0;
+}
+
+/* === Text === */
+.textContent h2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+
+.textContent h4 {
+  font-weight: 400;
+  color: #9fa6b2;
+  margin-bottom: 0.8rem;
+}
+
+.textContent p {
+  font-size: 0.9rem;
+  color: #b8c1cc;
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+/* === Social Links === */
+a {
+  color: #5e81ac;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #88c0d0;
+  text-shadow: 0 0 8px rgba(136,192,208,0.5);
+}
+
+/* === Small Glow Animation === */
+@keyframes subtleGlow {
+  0% { box-shadow: 0 0 0 rgba(136,192,208,0); }
+  100% { box-shadow: 0 0 10px rgba(136,192,208,0.3); }
+}
