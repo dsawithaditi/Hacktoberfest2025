@@ -61,5 +61,14 @@
     "github_profile_url": "https://github.com/seobysoumik",
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
+  },
+  {
+    "name": "Aditya Chavan",
+    "occupation": "Full-Stack Web Developer",
+    "place": "Maharashtra, India",
+    "bio": "Passionate about building scalable web applications and exploring new technologies.",
+    "github_profile_url": "https://github.com/Adi-bit93",
+    "project_netlify_link": "https://aditya93-profile-card.netlify.app/",
+    "tags": ["minimalist", "animation", "light-theme"]
   }
 ]
