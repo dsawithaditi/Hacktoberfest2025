@@ -62,4 +62,15 @@
     "project_netlify_link": "https://soumik-profile-card.netlify.app/",
     "tags": ["animated", "light-theme"]
   }
+
+  [
+  {
+    "name": "Lisa Tidball",
+    "occupation": "Software Engineer",
+    "place": "Fort Leonard Wood, MO, USA",
+    "bio": "Building beautiful things for the web!",
+    "github_profile_url": "https://github.com/li3097",
+    "tags": [ "websites", "designer"]
+  },
+
 ]
